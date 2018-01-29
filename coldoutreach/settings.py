@@ -25,7 +25,7 @@ SECRET_KEY = 'r&5nft-mspqiseydm3-4+o9ifx=y-ji%a!vfy$ocdd2!$elc$$'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["coldoutreach-staging.herokuapp.com"]
 
 
 # Application definition
