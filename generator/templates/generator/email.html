@@ -1,5 +1,37 @@
-<input type="text" name="profile_url"></input>
+<strong>Recruiter's LinkedIn Profile:</strong> - "https://www.linkedin.com/in/trali"
+<strong>Candidate's LinkedIn Profile:</strong>
 
-<textarea rows="4" cols="50">
+<textarea rows="4" cols="50" id="awesome-profile">
 Here is where we will have a generated email. Users can edit the text in this textbook as they please, inserting in their custom copy.
 </textarea>
+
+{% load static %}
+<!-- <script src="{% static 'cors_proxy.js' %}" /> -->
+
+<script>
+var cors_api_url = 'https://cors-anywhere.herokuapp.com/';
+function doCORSRequest(options, printResult) {
+  var x = new XMLHttpRequest();
+  x.open(options.method, cors_api_url + options.url);
+  x.onload = x.onerror = function() {
+    printResult(
+      options.method + ' ' + options.url + '\n' +
+      x.status + ' ' + x.statusText + '\n\n' +
+      (x.responseText || '')
+    );
+  };
+  if (/^POST/i.test(options.method)) {
+    x.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+  }
+  x.send(options.data);
+}
+
+doCORSRequest({
+    method: 'GET',
+    url: 'https://linkedin.com',
+    data: ''
+  }, function printResult(result) {
+    console.log(result);
+  }
+)
+</script>

@@ -2,4 +2,17 @@
 
 Instantly create custom outreach emails tailored to each candidate.
 
+<form method="post" enctype="multipart/form-data">
+  {% csrf_token %}
+  <input type="file" name="myfile">
+  <button type="submit">Upload</button>
+</form>
+
+{% if uploaded_file_json %}
+  <p>Here is the parsed JSON of your PDF:</p>
+  <code>
+    {{ uploaded_file_json }}
+  </code>
+{% endif %}
+
 <a href="{% url 'profile' %}">Connect with Linkedin</a>
