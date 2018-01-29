@@ -9,3 +9,6 @@ To generate personalized cold-call emails based on the procedure outlined by Kev
 ## Requirements
  - pip3 install -r requirements.txt
  - python3 manage.py runserver
+
+## Staging Site
+Staging site is located at https://coldoutreach-staging.herokuapp.com
