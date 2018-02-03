@@ -150,22 +150,33 @@ def get_experience_info(objs):
     ret.append(row)
     return ret
 
+def is_school_header(obj):
+    FONTSIZE = 13.4  # fontsize of bold headers
+    has_header = get_chars(obj)[0].size > FONTSIZE
+    mentions_activities_and_societies = (re.match("^Activities and Societies:", obj.get_text()))
+    is_valid_header = not mentions_activities_and_societies
+    return (has_header and is_valid_header)
+
 def get_education_info(objs):
     """Collects schools,majors,dates, takes a list of LTObjects, returns a
     list: [school,degree,major,{'from_month':'','from_year':'','to_month':'','to_year':''}]
     BUG - get_education_info does not properly account for "Activites and Societies"
     """
     # collect schools and dates
-    FONTSIZE = 13.4  # fontsize of bold headers
     ret = []
     degree = major = dates = school = ''
     for idx, obj in enumerate(objs):
-        if get_chars(obj)[0].size > FONTSIZE:
+        if is_school_header(obj):
             try:
                 next_object = objs[idx + 1].get_text()
             except Exception as e:
                 print(e)
                 next_object = ''
+            try:
+                third_object = objs[idx + 2].get_text()
+            except Exception as e:
+                print(e)
+                third_object = ''
             school = obj.get_text().strip()
             # print next_object
             if next_object:
@@ -184,7 +195,13 @@ def get_education_info(objs):
                 degree = major = ''
                 dates = {'from_month': '', 'from_year': '', 'to_month': '', 'to_year': ''}
 
-            school = { "School": school, "Degree": degree, "Major": major, "Dates": dates }
+            if re.match("^Activities and Societies:", third_object):
+                third_line = third_object.split(':')
+                activites = third_line[1].strip()
+            else:
+                activites = ''
+
+            school = { "School": school, "Degree": degree, "Major": major, "Dates": dates, "Activities": activites }
             ret.append(school)
     return ret
 
