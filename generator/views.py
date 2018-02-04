@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.shortcuts import render
 from django.core.files.storage import FileSystemStorage
+from generator.models import LinkedInPDF
 
 import uuid
 
@@ -11,6 +12,7 @@ import pdb
 import generator.resume_parser as resume_parser
 
 def index(request):
+  pdb.set_trace()
   context = {}
   if request.method == 'POST' and request.FILES['myfile']:
       myfile = request.FILES['myfile']
@@ -24,6 +26,9 @@ def index(request):
       filename ="%s.%s" % (random_name, extension)
       fs.save(filename, myfile)
       context["uploaded_file_json"] = resume_parser.convert(filename)
+      pdf = LinkedInPDF(guid=random_name, json=context["uploaded_file_json"])
+      pdf.save()
+
       # import subprocess
       # import sys
       # res = subprocess.run([sys.executable, "generator/resume_parser.py", "-i", filename])
