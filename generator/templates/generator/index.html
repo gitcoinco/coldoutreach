@@ -4,14 +4,27 @@ Instantly create custom outreach emails tailored to each candidate.
 
 <form method="post" enctype="multipart/form-data">
   {% csrf_token %}
-  <input type="file" name="myfile">
+  <label for="recruiter_file">Recruiter Resume</label>
+  <input type="file" name="recruiter_file">
+  <label for="candidate_file">Candidate Resume</label>
+  <input type="file" name="candidate_file">
   <button type="submit">Upload</button>
 </form>
 
 {% if uploaded_file_json %}
-  <p>Here is the parsed JSON of your PDF:</p>
+  <p>Here is the parsed JSON of the recruiter PDF:</p>
   <code>
     {{ uploaded_file_json }}
+  </code>
+
+  <p>Here is the parsed JSON of the candidate PDF:</p>
+  <code>
+    {{ uploaded_file_json_2 }}
+  </code>
+
+  <p>And here's an example genereated letter:</p>
+  <code>
+    {{ generated_text }}
   </code>
 {% endif %}
 
