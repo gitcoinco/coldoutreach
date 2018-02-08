@@ -157,6 +157,55 @@ def is_school_header(obj):
     is_valid_header = not mentions_activities_and_societies
     return (has_header and is_valid_header)
 
+def get_credential_info(credential_object):
+    if credential_object is not None:
+        credential_array = credential_object.split(",")
+        if len(credential_array) >= 3:
+            degree = credential_array[0].strip()
+            major = ' '.join(credential_array[1:-1]).strip()
+            dates = parse_date(credential_array[-1])
+        elif len(credential_array) == 2:
+            degree = ""
+            major = credential_array[0]
+            dates = parse_date(credential_array[1])
+        elif len(credential_array) == 1:
+            degree = major = ""
+            dates = parse_date(credential_array[0])
+
+    else:
+        degree = major = ""
+        dates = {'from_month': '', 'from_year': '', 'to_month': '', 'to_year': ''}
+
+    return [degree, major, dates]
+
+def get_activities_info(activities_text):
+    if re.match("^Activities and Societies:", activities_text):
+        activities_array = activities_text.split(':')
+        activites = activities_array[1].strip()
+    else:
+        activites = ''
+
+    return activites
+
+def get_info_about_school(obj, objs, idx):
+    try:
+        credential_object = objs[idx + 1].get_text()
+    except Exception as e:
+        print(e)
+        credential_object = ''
+    try:
+        activities_text = objs[idx + 2].get_text()
+    except Exception as e:
+        print(e)
+        activities_text = ''
+
+    school = obj.get_text().strip()
+    degree, major, dates = get_credential_info(credential_object)
+    activites = get_activities_info(activities_text)
+
+    dictionary = { "School": school, "Degree": degree, "Major": major, "Dates": dates, "Activities": activites }
+    return dictionary
+
 def get_education_info(objs):
     """Collects schools,majors,dates, takes a list of LTObjects, returns a
     list: [school,degree,major,{'from_month':'','from_year':'','to_month':'','to_year':''}]
@@ -164,44 +213,9 @@ def get_education_info(objs):
     """
     # collect schools and dates
     ret = []
-    degree = major = dates = school = ''
     for idx, obj in enumerate(objs):
         if is_school_header(obj):
-            try:
-                next_object = objs[idx + 1].get_text()
-            except Exception as e:
-                print(e)
-                next_object = ''
-            try:
-                third_object = objs[idx + 2].get_text()
-            except Exception as e:
-                print(e)
-                third_object = ''
-            school = obj.get_text().strip()
-            # print next_object
-            if next_object:
-                second_line = next_object.split(',')
-                if len(second_line) >= 3:
-                    degree = second_line[0].strip()
-                    major = ' '.join(second_line[1:-1]).strip()
-                    dates = parse_date(second_line[-1])
-                elif len(second_line) == 1:
-                    dates = parse_date(second_line[0])
-                elif len(second_line) == 2:
-                    major = second_line[0]
-                    dates = parse_date(second_line[1])
-
-            else:
-                degree = major = ''
-                dates = {'from_month': '', 'from_year': '', 'to_month': '', 'to_year': ''}
-
-            if re.match("^Activities and Societies:", third_object):
-                third_line = third_object.split(':')
-                activites = third_line[1].strip()
-            else:
-                activites = ''
-
-            school = { "School": school, "Degree": degree, "Major": major, "Dates": dates, "Activities": activites }
+            school = get_info_about_school(obj, objs, idx)
             ret.append(school)
     return ret
 
@@ -233,6 +247,7 @@ def convert(input_file):
     # getting objects from the corresponding sections
     exp = get_data(objs, 'Experience')
     ed = get_data(objs, 'Education')
+
     name = get_name(objs)[0]
     surname = get_name(objs)[1]
 

@@ -116,3 +116,24 @@ class TestResumeParser(TestCase):
     expected_activities = "2015 Bumblebees Cohort"
     actual_activites = example_school["Activities"]
     self.assertEqual(expected_activities, actual_activites)
+
+  def test_education_school_with_no_degree_or_major_get_parsed_correctly_when_followed_by_school_with_degree_and_major(self):
+    education_array = self.get_education_array("DanBernierProfile")
+    first_example_school = education_array[0]
+    second_example_school = education_array[1]
+
+    expected_first_degree = "BS"
+    actual_first_degree = first_example_school["Degree"]
+    self.assertEqual(expected_first_degree, actual_first_degree)
+
+    expected_first_major = "Computer Science"
+    actual_first_major = first_example_school["Major"]
+    self.assertEqual(expected_first_major, actual_first_major)
+
+    expected_second_degree = ""
+    actual_second_degree = second_example_school["Degree"]
+    self.assertEqual(expected_second_degree, actual_second_degree)
+
+    expected_second_major = ""
+    actual_second_major = second_example_school["Major"]
+    self.assertEqual(expected_second_major, actual_second_major)
