@@ -58,7 +58,7 @@ def extract_text(objs):
 
 def count_of_technology_words(word, resume_as_text):
     escaped_word = re.escape(word)
-    regex_pattern = r'(^|\s){word}($|\s)'.format(word=escaped_word)
+    regex_pattern = r'(^|\s|[.]){word}($|\s|[.])'.format(word=escaped_word)
     array = re.findall(regex_pattern, resume_as_text, re.IGNORECASE)
     return len(array)
 

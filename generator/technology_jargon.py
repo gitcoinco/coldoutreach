@@ -314,6 +314,9 @@ array = [
   "ZetaLisp",
   # Additional words not in the corpus but are technology related
   ".NET",
+  "blockchain",
+  "ethereum",
+  "bitcoin",
 ]
 
 keywords = set(word for word in array)
