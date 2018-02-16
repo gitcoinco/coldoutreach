@@ -33,6 +33,8 @@ from pdfminer.layout import LAParams, LTTextBox, LTTextLine, LTFigure, LTImage, 
     LTText
 import json
 
+import re
+
 # def parse_date(dates):
 #     """Parses a string with the dates in it,
 #     take string, returns a dictionary: {'from_month':'','from_year':'','to_month':'','to_year':''}
@@ -228,12 +230,14 @@ def extract_text(objs):
     for obj in objs:
         if "get_text" in dir(obj):
             text += obj.get_text()
-    cleansed_text =  text.replace('\n', ' ')
-    array = cleansed_text.split(" ")
-    return array
+    cleansed_text = text.replace('\n', ' ')
+    return cleansed_text
 
-def is_valid_technology_word(word, keywords):
-    return word.lower() in keywords
+def count_of_technology_words(word, resume_as_text):
+    escaped_word = re.escape(word)
+    regex_pattern = r'(^|\s){word}($|\s)'.format(word=escaped_word)
+    array = re.findall(regex_pattern, resume_as_text, re.IGNORECASE)
+    return len(array)
 
 def convert(input_file):
     f = input_file
@@ -265,9 +269,11 @@ def convert(input_file):
     resume_as_text = extract_text(objs)
 
     counter = Counter()
-    for word in resume_as_text:
-        if is_valid_technology_word(word, technology_jargon.keywords):
-            counter[word.lower().strip()] += 1
+
+    for word in technology_jargon.keywords:
+        count = count_of_technology_words(word, resume_as_text)
+        if count > 0:
+            counter[word.lower().strip()] += count
 
     return json.dumps(counter)
 

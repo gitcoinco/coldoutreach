@@ -316,4 +316,4 @@ array = [
   ".NET",
 ]
 
-keywords = set(word.lower() for word in array)
+keywords = set(word for word in array)
