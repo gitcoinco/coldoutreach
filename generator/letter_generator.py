@@ -28,7 +28,10 @@ def generate(recruiter_json, candidate_json):
   recruiter_counter = convert_json_string_to_set(recruiter_json)
   candidate_counter = convert_json_string_to_set(candidate_json)
   combined_set = recruiter_counter & candidate_counter
-  greatest_keyword = combined_set.most_common(1)[0][0]
-
+  greatest_keyword = combined_set.most_common(1)
+  if (len(greatest_keyword) > 0):
+    greatest_keyword = greatest_keyword[0][0]
+  else:
+    greatest_keyword = "software"
   generated_letter = create_letter(greatest_keyword.capitalize())
   return generated_letter
