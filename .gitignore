@@ -2,3 +2,7 @@ venv
 *.pyc
 staticfiles
 .env
+.idea
+.vscode
+node_modules
+db.sqlite3
