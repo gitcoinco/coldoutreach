@@ -6,7 +6,7 @@ from tracery.modifiers import base_english
 def create_letter(keyword):
   rules = {
       'origin': '#introduction# #talk_about_talent# #lead_into_job_description#',
-      'introduction': ['Found your #website# via Google and enjoyed #reading# it.', 'Stumbled uponed upon your #website#, and loved #reading# it.', 'Found your #website# via a keyword search for KEYWORD engineers.'],
+      'introduction': ['Found your #website# via Google and enjoyed #reading# it.', 'Stumbled uponed upon your #website#, and loved #reading# it.', 'Found your #website# via a keyword search.'],
       'website': ['website', 'blog', 'profile', 'resume'],
       'reading': ['reading', 'looking at'],
       'talk_about_talent': ['You look like you #know# #keyword_praise#.'],
