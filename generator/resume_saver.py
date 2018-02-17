@@ -13,6 +13,7 @@ def save(myfile):
   filename ="%s.%s" % (random_name, extension)
   fs.save(filename, myfile)
   uploaded_file_json = resume_parser.convert(filename)
+  fs.delete(filename)
 
   # While this works locally, the problem is that it does not work in Heroku. This is because of Heroku's file system, which does not play nice with SQLite. We'd need to switch over to Postgres.
   # pdf = LinkedInPDF(guid=random_name, json=uploaded_file_json)
