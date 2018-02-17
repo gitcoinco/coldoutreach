@@ -6,7 +6,7 @@ from tracery.modifiers import base_english
 def create_letter(keyword):
   rules = {
       'origin': '#introduction# #talk_about_talent# #lead_into_job_description#',
-      'introduction': ['#found your #website# via Google and #loved #reading# it.', '#found your #website#, and #loved #reading# it.', '#found your #website# via a keyword search.'],
+      'introduction': ['#found# your #website# via Google and #loved# #reading# it.', '#found# your #website#, and #loved# #reading# it.', '#found# your #website# via a keyword search.'],
       'found': ['Found', 'Stumbled upon', 'Discovered'],
       'loved': ['loved', 'enjoyed', 'appreciated'],
       'website': ['website', 'blog', 'profile', 'resume'],
@@ -36,5 +36,5 @@ def generate(recruiter_json, candidate_json):
     greatest_keyword = greatest_keyword[0][0]
   else:
     greatest_keyword = "software"
-  generated_letter = create_letter(greatest_keyword.capitalize())
+  generated_letter = create_letter(greatest_keyword)
   return generated_letter
