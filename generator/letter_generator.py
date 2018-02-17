@@ -8,13 +8,13 @@ def create_letter(keyword):
       'origin': '#introduction# #talk_about_talent# #lead_into_job_description#',
       'introduction': ['#found your #website# via Google and #loved #reading# it.', '#found your #website#, and #loved #reading# it.', '#found your #website# via a keyword search.'],
       'found': ['Found', 'Stumbled upon', 'Discovered'],
-      'loved': ['loved', 'enjoyed', 'appreciated']
+      'loved': ['loved', 'enjoyed', 'appreciated'],
       'website': ['website', 'blog', 'profile', 'resume'],
       'reading': ['reading', 'looking at'],
       'talk_about_talent': ['We share the same #passion# for KEYWORD.','You look like you #know# #keyword_praise#.'],
       'know': ['know', 'understand'],
       'keyword_praise': ['your KEYWORD-fu', 'KEYWORD deeply', 'KEYWORD down to a science'],
-      'passion': ['passion', 'love', 'affection', 'zeal', 'devotion']
+      'passion': ['passion', 'love', 'affection', 'zeal', 'devotion'],
       'lead_into_job_description': ['I have #interesting.a# project for you to look at.', "My company is looking for #interesting# people like you."],
       'interesting': ['interesting', 'cool', 'awesome', 'neat'],
   }
