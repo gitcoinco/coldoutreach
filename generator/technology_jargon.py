@@ -148,7 +148,7 @@ array = [
   "Java",
   "Javascript",
   "Jekyll",
-  "JQuery",
+  "jQuery",
   "KeenIO",
   "Kickstarter",
   "Knockout",
@@ -203,7 +203,7 @@ array = [
   "Redis",
   "Refinery",
   "Route53",
-  "Rspec",
+  "RSpec",
   "Ruby",
   "Rust",
   "Sails",
@@ -315,8 +315,8 @@ array = [
   # Additional words not in the corpus but are technology related
   ".NET",
   "blockchain",
-  "ethereum",
-  "bitcoin",
+  "Ethereum",
+  "Bitcoin",
 ]
 
 keywords = set(word for word in array)

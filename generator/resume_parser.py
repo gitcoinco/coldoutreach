@@ -96,6 +96,6 @@ def convert(input_file):
     for word in technology_jargon.keywords:
         count = count_of_technology_words(word, resume_as_text)
         if count > 0:
-            counter[word.lower().strip()] += count
+            counter[word] += count
 
     return json.dumps(counter)

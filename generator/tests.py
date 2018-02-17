@@ -25,32 +25,33 @@ class TestResumeParser(TestCase):
     return self.convert_to_counter(json_file)
 
   def test_parse_tariq_ali_profile(self):
-    expected_counter = Counter({'ruby': 8, 'rails': 5, 'wordpress': 3, 'javascript': 2, 'bootstrap': 2, 'rspec': 1, 'jquery': 1, 'ethereum': 1, 'angular': 1, 'sinatra': 1, 'c#': 1, 'c++': 1, '.net': 1, 'blockchain': 1})
+    expected_counter = Counter({'Ruby': 8, 'Rails': 5, 'WordPress': 3, 'Bootstrap': 2, 'JavaScript': 1, 'jQuery': 1, '.NET': 1, 'C#': 1, 'RSpec': 1, 'Sinatra': 1, 'C++': 1, 'Angular': 1, 'Javascript': 1, 'Ethereum': 1, 'blockchain': 1})
     actual_counter = self.generate_counter("TariqAliProfile")
     self.assertEqual(expected_counter, actual_counter)
 
   def test_parse_second_tariq_ali_profile(self):
-    expected_counter = Counter({'ruby': 15, 'rails': 5, 'javascript': 4, 'wordpress': 3, 'angular': 3, 'jquery': 2, 'bootstrap': 2, 'c++': 2, 'twitter': 2, 'sinatra': 2, 'aws': 1, 'capistrano': 1, 'c#': 1, '.net': 1, 'blockchain': 1, 'react': 1, 'github': 1, 'rspec': 1, 'ethereum': 1})
+    expected_counter = Counter({'Ruby': 15, 'Rails': 5, 'WordPress': 3, 'Angular': 3, 'Sinatra': 2, 'jQuery': 2, 'JavaScript': 2, 'C++': 2, 'Twitter': 2, 'Javascript': 2, 'Bootstrap': 2, 'GitHub': 1, '.NET': 1, 'RSpec': 1, 'blockchain': 1, 'Ethereum': 1, 'Capistrano': 1, 'AWS': 1, 'C#': 1, 'React': 1})
     actual_counter = self.generate_counter("Tariq_Ali")
     self.assertEqual(expected_counter, actual_counter)
 
   def test_parse_dan_bernier_profile(self):
-    expected_counter = Counter({'ruby': 7, 'processing': 4, 'c#': 3, 'rails': 2, 'javascript': 2, 'scheme': 1, '.net': 1})
+    expected_counter = Counter({'Ruby': 7, 'Processing': 4, 'C#': 3, 'Rails': 2, 'Javascript': 1, '.NET': 1, 'JavaScript': 1, 'Scheme': 1})
     actual_counter = self.generate_counter("DanBernierProfile")
     self.assertEqual(expected_counter, actual_counter)
 
   def test_parse_dylan_hirschkorn_profile(self):
-    expected_counter = Counter({'basic': 3, 'dylan': 3, 'visual basic': 3, 'c#': 2, 'swift': 1})
+    expected_counter = Counter({'Dylan': 3, 'Visual Basic': 3, 'BASIC': 3, 'C#': 2, 'Swift': 1})
     # This is a bug, Dylan only mentioned "Visual Basic", not "Basic" on his resume. However, I do not know of a good way of fixing this specific edge case. Also, Dylan is the name of a programming language, which is why Dylan shows up in the counter.
     actual_counter = self.generate_counter("DylanHirschkornProfile")
     self.assertEqual(expected_counter, actual_counter)
 
   def test_parse_sean_dugan_murphy_profile(self):
-    expected_counter = Counter({'swift': 11, 'twitter': 3, 'objective-c': 3, 'facebook': 3, 'github': 2, 'youtube': 2, 'css': 1, 'c#': 1})
+    expected_counter = Counter({'Swift': 11, 'Twitter': 3, 'Objective-C': 3, 'Facebook': 3, 'GitHub': 2, 'YouTube': 2, 'CSS': 1, 'C#': 1})
     actual_counter = self.generate_counter("SeanDuganMurphyProfile")
     self.assertEqual(expected_counter, actual_counter)
 
   def test_parse_christopher_salat_ceev(self):
-    expected_counter = Counter({'youtube': 5, 'php': 2, 'scratch': 1})
+    # Note that Christopher Salat does not actually know either PHP or Scratch. He links to several websites that end with the .php extension and he serves as a Scratch DJ. This indicates a problem with relying solely on keywords detached from the context.
+    expected_counter = Counter({'YouTube': 5, 'PHP': 2, 'Scratch': 1})
     actual_counter = self.generate_counter("Christopher_Salat_Ceev")
     self.assertEqual(expected_counter, actual_counter)
