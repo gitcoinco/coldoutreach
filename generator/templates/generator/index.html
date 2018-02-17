@@ -2,7 +2,7 @@
 
 Instantly create custom outreach emails tailored to each candidate.
 
-<form method="post" enctype="multipart/form-data">
+<form method="post" action="/profile" enctype="multipart/form-data">
   {% csrf_token %}
   <label for="recruiter_file">Recruiter Resume</label>
   <input type="file" name="recruiter_file">
