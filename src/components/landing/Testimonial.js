@@ -1,0 +1,88 @@
+import React, { Component } from 'react';
+import { Row, Col, Carousel } from 'antd';
+import '../../assets/styles/css/testimonial.css';
+
+class Slide extends Component {
+
+  render() {
+    const {quote, img, alt, author, profession} = this.props;
+    return(
+      <Row>
+        <Col span={3} className="photo">
+          <img alt={alt} src={img}/>
+        </Col>
+        <Col offset={1} span={20}>
+          <Col span={24}>
+            <p className="quote">{quote}</p>
+          </Col>
+          <Col span={24}>
+            <Row><p className="author">{author}</p></Row>
+            <Row>
+              <p className="profession">{profession}</p>
+            </Row>
+          </Col>
+        </Col>
+      </Row>
+    )
+  }
+
+}
+
+class Testimonial extends Component {
+
+  render() {
+    return (
+      <div class="testimonials">
+        <Carousel autoplay>
+          <div>
+            <Slide
+              quote="“Just started using coldoutreach.io. Great way to match
+              our needs with the talent we’re looking for. A perfect
+              tool for recruiting and hiring”"
+              img="https://avatars2.githubusercontent.com/u/5358146?s=400&u=61bb639da790daf097c0629587e0904223d2acaf&v=4"
+              alt="@thelostone"
+              author="Aditya Anand"
+              profession="Photographer, works with Slack team"
+            />
+          </div>
+          <div>
+            <Slide
+              quote="“Just started using coldoutreach.io. Great way to match
+              our needs with the talent we’re looking for. A perfect
+              tool for recruiting and hiring”"
+              img="https://avatars2.githubusercontent.com/u/5358146?s=400&u=61bb639da790daf097c0629587e0904223d2acaf&v=4"
+              alt="@thelostone"
+              author="Aditya Anand"
+              profession="Photographer, works with Slack team"
+            />
+          </div>
+          <div>
+            <Slide
+              quote="“Just started using coldoutreach.io. Great way to match
+              our needs with the talent we’re looking for. A perfect
+              tool for recruiting and hiring”"
+              img="https://avatars2.githubusercontent.com/u/5358146?s=400&u=61bb639da790daf097c0629587e0904223d2acaf&v=4"
+              alt="@thelostone"
+              author="Aditya Anand"
+              profession="Photographer, works with Slack team"
+            />
+          </div>
+          <div>
+            <Slide
+              quote="“Just started using coldoutreach.io. Great way to match
+              our needs with the talent we’re looking for. A perfect
+              tool for recruiting and hiring”"
+              img="https://avatars2.githubusercontent.com/u/5358146?s=400&u=61bb639da790daf097c0629587e0904223d2acaf&v=4"
+              alt="@thelostone"
+              author="Aditya Anand"
+              profession="Photographer, works with Slack team"
+            />
+          </div>
+        </Carousel>
+      </div>
+    );
+  }
+
+}
+
+export default Testimonial;

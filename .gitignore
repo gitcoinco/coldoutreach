@@ -6,3 +6,4 @@ staticfiles
 .vscode
 node_modules
 db.sqlite3
+*.css

@@ -1,0 +1,31 @@
+@import '~antd/dist/antd.css';
+
+@font-face {
+  font-family: "avenirNextThin";
+  src: url("../../fonts/avenir-next-thin.woff");
+}
+
+@font-face {
+  font-family: "avenirNext";
+  src: url("../../fonts/avenir-next-regular.woff");
+}
+
+@font-face {
+  font-family: "avenirNextMedium";
+  src: url("../../fonts/avenir-next-medium.woff");
+}
+
+body {
+  background-image: linear-gradient(134deg, #3023AE 0%, #C86DD7 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "avenirNext";
+}
+
+h1, h2 {
+  font-family: "avenirNextMedium";
+}
+
+p {
+  font-family: "avenirNextThin";
+}
