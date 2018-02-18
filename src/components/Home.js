@@ -15,7 +15,7 @@ class Home extends Component {
         <div className="gradient">
           <Header/>
           <Row className="landing-header">
-            <Col span={5} offset={2}>
+            <Col className="left" offset={2} md={20} lg={5}>
               <h1 class="title">A Better Way to Find Talent</h1>
               <p class="content">
                 <span>Instantly create custom</span>
@@ -26,15 +26,15 @@ class Home extends Component {
                 <Icon type="rocket" /> Get Started
               </Button>
             </Col>
-            <Col span={11} offset={4}>
+            <Col className="right" offset={2} md={20} lg={{span:11, offset:4}}>
               <Row>
-                <Col span={8}>
+                <Col offset={4} xs={16} sm={{span:8, offset:0}}>
                   <Card title="FIND CANDIDATE" image={image}/>
                 </Col>
-                <Col span={8}>
+                <Col offset={4} xs={16} sm={{span:8, offset:0}}>
                   <Card title="GENERATE EMAIL" image={image}/>
                 </Col>
-                <Col span={8}>
+                <Col offset={4} xs={16} sm={{span:8, offset:0}}>
                   <Card title="REACH OUT" image={image}/>
                 </Col>
               </Row>
@@ -45,19 +45,19 @@ class Home extends Component {
           <Col offset={2} span={22}>
             <h2>Recruit the Smart Way</h2>
           </Col>
-          <Col offset={2} span={6}>
+          <Col offset={2} sm={20} md={6}>
             <Info title="Lorem ipsum dolor sit amet"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Ut enim ad minim veniam" image={image}/>
           </Col>
-          <Col offset={1} span={6}>
+          <Col offset={2} sm={20} md={{span:6, offset:1}}>
             <Info title="Lorem ipsum dolor sit"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Ut enim ad minim veniam" image={image}/>
           </Col>
-          <Col offset={1} span={6}>
+          <Col offset={2} sm={20} md={{span:6, offset:1}}>
             <Info title="Lorem ipsum dolor sit"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
@@ -70,7 +70,7 @@ class Home extends Component {
           </Col>
         </Row>
         <Row className="testimonials">
-          <Col offset={4} span={16}>
+          <Col sm={24} md={{span:20, offset:2}} lg={{span:16, offset:4}}>
             <Testimonial/>
           </Col>
         </Row>

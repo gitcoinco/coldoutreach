@@ -8,10 +8,10 @@ class Slide extends Component {
     const {quote, img, alt, author, profession} = this.props;
     return(
       <Row>
-        <Col span={3} className="photo">
+        <Col sm={24} lg={{span:3, offset:0}} className="photo">
           <img alt={alt} src={img}/>
         </Col>
-        <Col offset={1} span={20}>
+        <Col offset={2} span={20} lg={{span:20, offset:1}}>
           <Col span={24}>
             <p className="quote">{quote}</p>
           </Col>
@@ -33,7 +33,7 @@ class Testimonial extends Component {
   render() {
     return (
       <div class="testimonials">
-        <Carousel autoplay>
+        <Carousel>
           <div>
             <Slide
               quote="“Just started using coldoutreach.io. Great way to match

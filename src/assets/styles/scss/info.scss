@@ -17,3 +17,15 @@
     line-height: 25px;
   }
 }
+
+@media (max-width: 576px) {
+  .info {
+    h3 {
+      font-size: 18px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}

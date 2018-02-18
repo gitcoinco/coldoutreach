@@ -80,3 +80,28 @@
     }
   }
 }
+
+@media (max-width: 576px) {
+  .landing-header {
+    .title {
+      line-height: 40px;
+      font-size: 2em;
+    }
+
+    .content {
+      font-size: 1.3em;
+    }
+
+    .left {
+      margin-bottom: 2em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .landing-header {
+    .title {
+      margin-top: 0;
+    }
+  }
+}
