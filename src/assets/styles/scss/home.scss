@@ -1,6 +1,6 @@
 .landing-header {
-  margin-top: 125px;
-  margin-bottom: 125px;
+  padding-top: 80px;
+  padding-bottom: 125px;
 
   h1, h2, p, i {
     color: #FFFFFF;
@@ -22,10 +22,11 @@
     }
   }
 
-  button {
+  a {
     border-color: #0077B5;
     background-color: #0077B5;
     padding-left: 0;
+    padding-top: 7px;
     width: 220px;
     height: 42px;
 
@@ -75,7 +76,7 @@
 
     i {
       position: relative;
-      top: 1px;
+      top: 2px;
     }
   }
 }

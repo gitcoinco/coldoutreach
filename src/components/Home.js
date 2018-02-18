@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col, Button, Icon } from 'antd';
+import Header from './Header';
 import Card from './landing/Card';
 import Info from './landing/Info';
 import Testimonial from './landing/Testimonial';
@@ -11,32 +12,35 @@ class Home extends Component {
   render() {
     return (
       <div>
-        <Row className="landing-header">
-          <Col span={5} offset={2}>
-            <h1 class="title">A Better Way to Find Talent</h1>
-            <p class="content">
-              <span>Instantly create custom</span>
-              <span>outreach emails tailored to</span>
-              <span>each candidate.</span>
-            </p>
-            <Button type="primary" href="/resume">
-              <Icon type="rocket" /> Get Started
-            </Button>
-          </Col>
-          <Col span={11} offset={4}>
-            <Row>
-              <Col span={8}>
-                <Card title="FIND CANDIDATE" image={image}/>
-              </Col>
-              <Col span={8}>
-                <Card title="GENERATE EMAIL" image={image}/>
-              </Col>
-              <Col span={8}>
-                <Card title="REACH OUT" image={image}/>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
+        <div className="gradient">
+          <Header/>
+          <Row className="landing-header">
+            <Col span={5} offset={2}>
+              <h1 class="title">A Better Way to Find Talent</h1>
+              <p class="content">
+                <span>Instantly create custom</span>
+                <span>outreach emails tailored to</span>
+                <span>each candidate.</span>
+              </p>
+              <Button type="primary" href="/resume">
+                <Icon type="rocket" /> Get Started
+              </Button>
+            </Col>
+            <Col span={11} offset={4}>
+              <Row>
+                <Col span={8}>
+                  <Card title="FIND CANDIDATE" image={image}/>
+                </Col>
+                <Col span={8}>
+                  <Card title="GENERATE EMAIL" image={image}/>
+                </Col>
+                <Col span={8}>
+                  <Card title="REACH OUT" image={image}/>
+                </Col>
+              </Row>
+            </Col>
+          </Row>
+        </div>
         <Row className="idea">
           <Col offset={2} span={22}>
             <h2>Recruit the Smart Way</h2>

@@ -1,9 +1,13 @@
 import React, { Component } from 'react';
+import Header from './Header';
 
 class Resume extends Component {
   render() {
     return (
-      <div>Resume</div>
+      <div className="gradient">
+        <Header/>
+        <div>Resume</div>
+      </div>
     );
   }
 }
