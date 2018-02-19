@@ -1,0 +1,130 @@
+.gradient {
+  height: 100%;
+}
+
+.resume {
+  padding-top: 80px;
+  padding-bottom: 40px;
+
+  h2, h3, h4, ul, button {
+    color: #FFFFFF;
+  }
+}
+
+.profile {
+  h3 {
+    font-size: 30px;
+    letter-spacing: -1.38px;
+    line-height: 58px;
+  }
+
+  #positions {
+    margin-bottom: 2px;
+  }
+
+  .text {
+    font-family: "avenirNext";
+  }
+
+  p {
+    font-size: 16px;
+    color: #FFFFFF;
+    letter-spacing: 0;
+  }
+
+  ul, #positions {
+    font-size: 16px;
+  }
+
+  li {
+    font-family: "avenirNextThin";
+  }
+}
+
+.upload-box {
+  padding-top: 5em;
+  padding-bottom:5em;
+  text-align: center;
+
+  h2 {
+    text-align: left;
+    font-size: 36px;
+    letter-spacing: -1.38px;
+    line-height: 58px;
+  }
+
+  h4 {
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 0;
+    line-height: 32px;
+  }
+
+  input, button {
+    height: 50px;
+  }
+
+  input {
+    font-size: 20px;
+    padding: 10px 25px;
+    color: #4A4A4A;
+    letter-spacing: -1.54px;
+    line-height: 58px;
+    border-radius: 0;
+  }
+
+  .ant-btn {
+    font-family: "avenirNext";
+    font-weight: "bolder";
+    font-size: 15px;
+    background: #3DD1AF;
+    border-radius: 3px;
+    margin-left: 10px;
+    border-color: #3DD1AF;
+  }
+
+  .ant-btn:hover, .ant-btn:focus {
+    color: #FFFFFF;
+    background: #52d6b8;
+    border-color: #52d6b8;
+  }
+}
+
+.upload-box::after {
+  content: "";
+  top:0;
+  left: 0;
+  position: relative;
+  background: #42445C;
+  opacity: 0.74;
+  z-index: -1;
+}
+
+@media (max-width: 768px) {
+  .upload-box {
+    input {
+      font-size: 18px;
+    }
+  }
+}
+
+@media (max-width: 650px) {
+
+  .upload-box {
+    padding-top: 40px;
+
+    h2 {
+      line-height: 45px;
+      font-size: 26px;
+    }
+
+    input {
+      font-size: 15px;
+      margin-bottom: 1em;
+    }
+
+    .ant-btn {
+      font-size: 13px;
+    }
+  }
+}

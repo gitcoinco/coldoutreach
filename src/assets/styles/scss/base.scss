@@ -17,6 +17,13 @@
 
 body {
   font-family: "avenirNext";
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.main, #coldoutreach {
+  height: 100%;
 }
 
 .gradient {
@@ -31,4 +38,10 @@ h1, h2 {
 
 p {
   font-family: "avenirNextThin";
+}
+
+@media (max-width: 650px) {
+  html {
+    height: auto;
+  }
 }
