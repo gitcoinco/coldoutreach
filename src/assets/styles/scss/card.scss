@@ -1,17 +1,19 @@
 .card {
+  border-radius: 2px;
   height: 360px;
   width: 200px;
   text-align: center;
-  opacity: 0.99;
+  background: #4e4376;
 
   img {
     margin-top: 4em;
     margin-bottom: 5em;
-    width: 8em;
+    height: 7em;
   }
 
   h2 {
     font-family: "avenirNext";
+    font-weight: bolder;
     color: #fff;
     line-height: 38px;
     letter-spacing: 1.15px;
@@ -24,18 +26,6 @@
   }
 }
 
-.card::after {
-  content: "";
-  position: relative;
-  top: 30px;
-  left: 0;
-  padding: 360px 100px 0;
-  border-radius: 3px;
-  background: #42445C;
-  z-index: -1;
-  opacity: 0.3;
-}
-
 @media (max-width: 576px) {
   .card {
     height: 200px;
@@ -45,29 +35,22 @@
       margin-bottom: 3em;
     }
   }
-
-  .card::after {
-    padding: 220px 100px;
-  }
 }
 
 @media (max-width: 768px) {
   .card {
+    margin-top: 4em;
     height: 300px;
     width: 200px;
 
     img {
-      margin-bottom: 2em;
-      width: 5em;
+      margin-bottom: 3.5em;
+      height: 5em;
     }
 
     h2 {
       font-size: 1.3em;
       line-height: 30px;
     }
-  }
-
-  .card::after {
-    padding: 200px 100px;
   }
 }

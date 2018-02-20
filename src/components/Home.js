@@ -6,7 +6,12 @@ import Info from './landing/Info';
 import Testimonial from './landing/Testimonial';
 
 import '../assets/styles/css/home.css';
-import image from '../assets/img/dummy.svg';
+import candidate from '../assets/img/candidate.svg';
+import generate from '../assets/img/generate.svg';
+import email from '../assets/img/email.svg';
+import recruit_1 from '../assets/img/recruit_1.svg';
+import recruit_2 from '../assets/img/recruit_2.svg';
+import recruit_3 from '../assets/img/recruit_3.svg';
 
 class Home extends Component {
   render() {
@@ -29,13 +34,13 @@ class Home extends Component {
             <Col className="right" offset={2} md={20} lg={{span:11, offset:4}}>
               <Row>
                 <Col offset={4} xs={16} sm={{span:8, offset:0}}>
-                  <Card title="FIND CANDIDATE" image={image}/>
+                  <Card title="FIND CANDIDATE" image={candidate} id="candidate"/>
                 </Col>
                 <Col offset={4} xs={16} sm={{span:8, offset:0}}>
-                  <Card title="GENERATE EMAIL" image={image}/>
+                  <Card title="GENERATE EMAIL" image={generate} id="generate"/>
                 </Col>
                 <Col offset={4} xs={16} sm={{span:8, offset:0}}>
-                  <Card title="REACH OUT" image={image}/>
+                  <Card title="REACH OUT" image={email} id="email"/>
                 </Col>
               </Row>
             </Col>
@@ -49,19 +54,19 @@ class Home extends Component {
             <Info title="Lorem ipsum dolor sit amet"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam" image={image}/>
+              Ut enim ad minim veniam" image={recruit_1} id="recruit_1"/>
           </Col>
           <Col offset={2} sm={20} md={{span:6, offset:1}}>
             <Info title="Lorem ipsum dolor sit"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam" image={image}/>
+              Ut enim ad minim veniam" image={recruit_2} id="recruit_2"/>
           </Col>
           <Col offset={2} sm={20} md={{span:6, offset:1}}>
             <Info title="Lorem ipsum dolor sit"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-              Ut enim ad minim veniam" image={image}/>
+              Ut enim ad minim veniam" image={recruit_3} id="recruit_3"/>
           </Col>
         </Row>
         <Row>

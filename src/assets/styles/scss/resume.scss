@@ -42,20 +42,22 @@
 }
 
 .upload-box {
-  padding-top: 5em;
-  padding-bottom:5em;
+  margin-top: 3em;
+  padding: 2em 4em 4em;
   text-align: center;
+  background: #4e4376;
+  border-radius: 2px;
 
   h2 {
     text-align: left;
-    font-size: 36px;
+    font-size: 25px;
     letter-spacing: -1.38px;
     line-height: 58px;
   }
 
   h4 {
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     letter-spacing: 0;
     line-height: 32px;
   }

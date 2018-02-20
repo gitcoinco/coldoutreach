@@ -1,0 +1,28 @@
+
+<svg width="46px" height="41px" viewBox="0 0 46 41" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 41 46 41 46 0 0 0"></polygon>
+    </defs>
+    <g id="Module-02-Templates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Copy" transform="translate(-558.000000, -1000.000000)">
+            <g id="Page-1" transform="translate(558.000000, 1000.000000)">
+                <path d="M19,22 C19,23.656 17.656,25 16,25 C14.344,25 13,23.656 13,22 C13,20.344 14.344,19 16,19 C17.656,19 19,20.344 19,22 Z" id="Stroke-1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-4"></g>
+                <polygon id="Stroke-3" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)" points="28 21 39 21 39 16 28 16"></polygon>
+                <polygon id="Stroke-5" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)" points="28 32 39 32 39 27 28 27"></polygon>
+                <path d="M46,37.1907692 C46,39.2953846 44.2481034,41 42.0865517,41 L4.91344828,41 C2.75189655,41 1,39.2953846 1,37.1907692 L1,4.80923077 C1,2.70461538 2.75189655,1 4.91344828,1 L42.0865517,1 C44.2481034,1 46,2.70461538 46,4.80923077 L46,37.1907692 Z" id="Stroke-6" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)"></path>
+                <path d="M6,4.5 C6,4.776 5.776,5 5.5,5 C5.224,5 5,4.776 5,4.5 C5,4.224 5.224,4 5.5,4 C5.776,4 6,4.224 6,4.5" id="Fill-8" fill="#000000" mask="url(#mask-2)"></path>
+                <path d="M11,4.5 C11,4.776 10.776,5 10.5,5 C10.224,5 10,4.776 10,4.5 C10,4.224 10.224,4 10.5,4 C10.776,4 11,4.224 11,4.5" id="Fill-9" fill="#000000" mask="url(#mask-2)"></path>
+                <path d="M14,4.5 C14,4.776 13.776,5 13.5,5 C13.224,5 13,4.776 13,4.5 C13,4.224 13.224,4 13.5,4 C13.776,4 14,4.224 14,4.5" id="Fill-10" fill="#000000" mask="url(#mask-2)"></path>
+                <path d="M16,25 C12.8997468,25 10.3706329,27.1476 10,29.9112 C11.6025316,31.2076 13.6987342,32 16,32 C18.3012658,32 20.3974684,31.2076 22,29.9112 C21.6293671,27.1476 19.1002532,25 16,25 Z" id="Stroke-11" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)"></path>
+                <path d="M1,7 L46,7" id="Path" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M25,23 C25,27.9695 20.9695,32 16,32 C11.0305,32 7,27.9695 7,23 C7,18.0305 11.0305,14 16,14 C20.9695,14 25,18.0305 25,23 Z" id="Stroke-12" stroke="#50E3C2" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

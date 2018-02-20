@@ -5,10 +5,10 @@ import '../../assets/styles/css/info.css';
 
 class Info extends Component {
   render() {
-    const {image, alt, title, content} = this.props;
+    const {id, image, alt, title, content} = this.props;
 
     return (
-      <Row className="info">
+      <Row className="info" id={id}>
         <Col span={24}>
           <Col span={4}><img src={image} alt={alt}/></Col>
           <Col span={16} offset={1}><h3>{title}</h3></Col>
