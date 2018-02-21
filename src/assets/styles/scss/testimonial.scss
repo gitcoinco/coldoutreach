@@ -1,6 +1,7 @@
 .testimonials {
-  margin-top: 30px;
-  margin-bottom: 30px;
+  background: #FFF;
+  padding-top: 30px;
+  padding-bottom: 30px;
 
   .ant-carousel {
     .slick-slide {
@@ -80,7 +81,7 @@
 
 @media (max-width: 768px) {
   .testimonials {
-    margin-top: 5px;
+    padding-top: 5px;
 
     .ant-carousel {
       .slick-slide {

@@ -47,22 +47,22 @@ class Home extends Component {
           </Row>
         </div>
         <Row className="idea">
-          <Col offset={2} span={22}>
+          <Col offset={1} span={22}>
             <h2>Recruit the Smart Way</h2>
           </Col>
-          <Col offset={2} sm={20} md={6}>
+          <Col offset={1} sm={22} md={6}>
             <Info title="Lorem ipsum dolor sit amet"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Ut enim ad minim veniam" image={recruit_1} id="recruit_1"/>
           </Col>
-          <Col offset={2} sm={20} md={{span:6, offset:1}}>
+          <Col offset={1} sm={22} md={{span:6, offset:1}}>
             <Info title="Lorem ipsum dolor sit"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Ut enim ad minim veniam" image={recruit_2} id="recruit_2"/>
           </Col>
-          <Col offset={2} sm={20} md={{span:6, offset:1}}>
+          <Col offset={1} sm={22} md={{span:6, offset:1}}>
             <Info title="Lorem ipsum dolor sit"
               content="Lorem ipsum dolor sit amet, consectetur adipiscing elit,
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.

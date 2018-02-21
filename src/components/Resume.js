@@ -44,10 +44,10 @@ class Resume extends Component {
               <h2>Who would you like to reach out to?</h2>
               <h4>Paste Candidate URL</h4>
             </Col>
-            <Col xs={24} sm={20}>
+            <Col xs={24} lg={20}>
               <Input placeholder="http://www.linkedin.com/in/amykeys"/>
             </Col>
-            <Col xs={24} sm={2}>
+            <Col xs={24} lg={2}>
               <Button>Generate Email</Button>
             </Col>
           </Col>
