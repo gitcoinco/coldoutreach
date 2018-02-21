@@ -85,10 +85,16 @@
     border-color: #3DD1AF;
   }
 
-  .ant-btn:hover, .ant-btn:focus {
+  .ant-btn:hover {
     color: #FFFFFF;
-    background: #52d6b8;
+    background-color: #52d6b8;
     border-color: #52d6b8;
+  }
+
+  .ant-btn:focus {
+    color: #FFFFFF;
+    border-color: #36bc9d;
+    background-color: #36bc9d;
   }
 }
 

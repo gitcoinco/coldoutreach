@@ -63,13 +63,18 @@
 
     .generate {
       float: right;
-      background-color: #3dd1af;
-      border-color: #3dd1af;
+      background-color: #3DD1AF;
+      border-color: #3DD1AF;
     }
 
     .generate:hover {
-      background-color: #63dabf;
-      border-color: #63dabf;
+      background-color: #52d6b8;
+      border-color: #52d6b8;
+    }
+
+    .generate:focus {
+      border-color: #36bc9d;
+      background-color: #36bc9d;
     }
   }
   

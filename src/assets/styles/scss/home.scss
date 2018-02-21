@@ -23,8 +23,8 @@
   }
 
   a {
-    border-color: #0077B5;
-    background-color: #0077B5;
+    border-color: #3DD1AF;
+    background-color: #3DD1AF;
     padding-left: 0;
     padding-top: 7px;
     width: 220px;
@@ -44,9 +44,14 @@
     }
   }
 
-  button:hover {
-    border-color: #1984bc;
-    background-color: #1984bc;
+  a:hover {
+    border-color: #52d6b8;
+    background-color: #52d6b8;
+  }
+
+  a:focus {
+    border-color: #36bc9d;
+    background-color: #36bc9d;
   }
 }
 
