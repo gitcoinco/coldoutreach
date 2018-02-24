@@ -37,7 +37,7 @@ class Testimonial extends Component {
   render() {
     return (
       <div class="testimonials">
-        <Carousel>
+        <Carousel autoplay>
           <div>
             <Slide
               quote="“Just started using coldoutreach.io. Great way to match

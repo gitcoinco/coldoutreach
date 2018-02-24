@@ -71,6 +71,21 @@
   }
 }
 
+.right-decor, .left-decor {
+  position: absolute;
+}
+
+.right-decor {
+  top: -64px;
+  right: 60px;
+  transform: rotate(90deg); 
+}
+
+.left-decor {
+  left: 0;
+  bottom: 30px;  
+}
+
 #recruit_3 img {
   position: relative;
   bottom: 8px;
@@ -111,6 +126,10 @@
 }
 
 @media (max-width: 768px) {
+  .right-decor, .left-decor {
+    display: none;
+  }
+
   .landing-header {
     .title {
       margin-top: 0;

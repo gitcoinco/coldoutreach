@@ -12,6 +12,7 @@ import email from '../assets/img/email.svg';
 import recruit_1 from '../assets/img/recruit_1.svg';
 import recruit_2 from '../assets/img/recruit_2.svg';
 import recruit_3 from '../assets/img/recruit_3.svg';
+import decor from '../assets/img/decor.svg';
 
 class Home extends Component {
   render() {
@@ -68,6 +69,7 @@ class Home extends Component {
               sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
               Ut enim ad minim veniam" image={recruit_3} id="recruit_3"/>
           </Col>
+          <img className="left-decor" alt="" src={decor}/>
         </Row>
         <Row>
           <Col className="down" span={24}>
@@ -75,6 +77,7 @@ class Home extends Component {
           </Col>
         </Row>
         <Row className="testimonials">
+          <img className="right-decor" alt="" src={decor}/>
           <Col sm={24} md={{span:20, offset:2}} lg={{span:16, offset:4}}>
             <Testimonial/>
           </Col>
