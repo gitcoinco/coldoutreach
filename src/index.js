@@ -10,7 +10,6 @@ import enUS from 'antd/lib/locale-provider/en_US';
 import store, { history } from './store';
 
 import App from './App';
-import './index.css';
 
 import registerServiceWorker from './registerServiceWorker';
 

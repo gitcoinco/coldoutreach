@@ -1,0 +1,56 @@
+.card {
+  border-radius: 2px;
+  height: 360px;
+  width: 200px;
+  text-align: center;
+  background: #4e4376;
+
+  img {
+    margin-top: 4em;
+    margin-bottom: 5em;
+    height: 7em;
+  }
+
+  h2 {
+    font-family: "avenirNext";
+    font-weight: bolder;
+    color: #fff;
+    line-height: 38px;
+    letter-spacing: 1.15px;
+    font-size: 1.6em;
+    text-align: center;
+
+    span {
+      display: block;
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .card {
+    height: 200px;
+    width: 100px;
+
+    img {
+      margin-bottom: 3em;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .card {
+    margin-top: 4em;
+    height: 300px;
+    width: 200px;
+
+    img {
+      margin-bottom: 3.5em;
+      height: 5em;
+    }
+
+    h2 {
+      font-size: 1.3em;
+      line-height: 30px;
+    }
+  }
+}

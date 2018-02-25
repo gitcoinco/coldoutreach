@@ -1,0 +1,121 @@
+.testimonials {
+  background: #FFF;
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  .ant-carousel {
+    .slick-slide {
+      height: 220px;
+      line-height: 160px;
+      background: #FFF;
+      overflow: hidden;
+    }
+
+    .slick-dots li button {
+      background-color: black;
+    }
+  }
+
+  .photo {
+    img {
+      float: right;
+      margin-top: 15px;
+      width: 120px;
+      height: 120px;
+      border-radius: 4px;
+    }
+  }
+
+  #org {
+    top: -4px;
+    right: -12px;
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    z-index: 2;
+    margin: 0;
+  }
+
+  .quote {
+    height: 120px;
+    font-family: "avenirNext";
+    font-size: 22px;
+    color: #43484C;
+    letter-spacing: 0;
+    line-height: 46px;
+    margin-bottom: 1em;
+  }
+
+  .author {
+    font-weight: bold;
+    font-size: 15px;
+    color: #43484D;
+    letter-spacing: 0;
+    line-height: 25px;
+    margin-bottom: 0;
+  }
+
+  .profession {
+    font-size: 13px;
+    color: #86939E;
+    letter-spacing: 0;
+    line-height: 25px;
+  }
+}
+
+@media (max-width: 576px) {
+  .testimonials {
+    text-align: center;
+
+    .photo img {
+      width: 100px;
+      height: 100px;
+      margin-top: 15px;
+    }
+
+    .quote {
+      margin-top: 15px;
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials {
+    padding-top: 5px;
+
+    .ant-carousel {
+      .slick-slide {
+        height: 320px;
+      }
+
+      .slick-dots {
+        bottom: -15px;
+      }
+    }
+
+    .photo img {
+      margin-left: auto;
+      margin-right: auto;
+      float: none;
+    }
+
+    .quote {
+      margin-top: 22px;
+      line-height: 30px;
+      font-size: 16px;
+      height: auto;
+    }
+
+    .author {
+      font-size: 14px;
+    }
+
+    .profession {
+      font-size: 12px;
+    }
+
+    #org {
+      display: none;
+    }
+  }
+}

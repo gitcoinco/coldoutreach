@@ -12,10 +12,12 @@
     "antd": "^3.1.6",
     "dotenv": "^5.0.0",
     "history": "^4.7.2",
+    "node-sass-chokidar": "0.0.3",
     "prettier": "^1.10.2",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-dropzone": "^4.2.7",
+    "react-lz-editor": "^0.11.9",
     "react-redux": "^5.0.2",
     "react-router": "^4.2.0",
     "react-router-dom": "^4.2.2",
@@ -43,6 +45,8 @@
     ]
   },
   "scripts": {
+    "build-css": "node-sass-chokidar src/assets/styles/scss -o src/assets/styles/css",
+    "watch-css": "npm run build-css && node-sass-chokidar src/assets/styles/scss/ -o src/assets/styles/css/ --watch --recursive",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",

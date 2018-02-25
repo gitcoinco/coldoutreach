@@ -1,0 +1,24 @@
+<svg width="44px" height="44px" viewBox="0 0 44 44" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 48.2 (47327) - http://www.bohemiancoding.com/sketch -->
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <polygon id="path-1" points="0 44 44 44 44 0 0 0"></polygon>
+    </defs>
+    <g id="Module-02-Templates" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Landing-Copy" transform="translate(-1022.000000, -987.000000)">
+            <g id="Page-1" transform="translate(1022.000000, 987.000000)">
+                <path d="M36,19.0527083 L36,39.31625 C36,41.350625 34.350625,43 32.31625,43 L4.68375,43 C2.649375,43 1,41.350625 1,39.31625 L1,11.68375 C1,9.649375 2.649375,8 4.68375,8 L32.31625,8 C33.8183333,8 35.1104167,8.89979167 35.6835417,10.1875 L36,19.0527083 Z" id="Stroke-1" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M21,36.4674747 C23.5151135,39.0507658 27.9754338,37.8900738 29.360488,36.4674747 C30.7455422,35.0448756 31.7710954,31.7874958 30.2313722,30.206035 C28.691649,28.6245743 26.5973467,28.5716204 25.0060672,30.206035 C23.4147876,31.8404497 24.3219006,33.7711199 23.090122,35.0362885 C21.8583434,36.3014571 21,36.4674747 21,36.4674747 Z" id="Stroke-3" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M27,29.2893423 L38.7236525,2.31259809 C39.0703834,1.51790555 39.8779404,1 40.7729209,1 L40.7773662,1 C42.00426,1 43,1.9587673 43,3.14010558 L43,3.20002853 C43,3.51391069 42.9288757,3.82208589 42.7910724,4.10600656 L29.5501019,31" id="Stroke-5" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path>
+                <path d="M33,23 L30,22" id="Stroke-7" stroke="#000000" stroke-linecap="round" stroke-linejoin="round"></path>
+                <mask id="mask-2" fill="white">
+                    <use xlink:href="#path-1"></use>
+                </mask>
+                <g id="Clip-10"></g>
+                <polygon id="Stroke-9" stroke="#50E3C2" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)" points="7 22 30 22 30 14 7 14"></polygon>
+                <polygon id="Stroke-11" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)" points="7 37 16 37 16 23 7 23"></polygon>
+                <polyline id="Stroke-12" stroke="#000000" stroke-linecap="round" stroke-linejoin="round" mask="url(#mask-2)" points="30 23 22 23 22 35"></polyline>
+            </g>
+        </g>
+    </g>
+</svg>
