@@ -9,6 +9,7 @@ To generate personalized cold-call emails based on the procedure outlined by Kev
 ```sh
  $ npm i
  $ npm start
+ $ npm run watch-css
 ```
 
 ### Backend
