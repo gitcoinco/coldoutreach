@@ -25,7 +25,8 @@ def create_letter(keyword):
 
 def convert_json_string_to_set(json_string):
   json_file = json.loads(json_string)
-  return Counter(json_file)
+  counter = json_file['counter']
+  return Counter(counter)
 
 def generate(recruiter_json, candidate_json):
   recruiter_counter = convert_json_string_to_set(recruiter_json)
