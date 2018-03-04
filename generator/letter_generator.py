@@ -3,6 +3,7 @@ from collections import Counter
 import tracery
 from tracery.modifiers import base_english
 
+# To generate the letter, we use pytracery (https://github.com/aparrish/pytracery), a Python port of the Tracery text expansion library.
 def create_letter(keyword):
   rules = {
       'origin': '#introduction# #talk_about_talent# #lead_into_job_description#',
