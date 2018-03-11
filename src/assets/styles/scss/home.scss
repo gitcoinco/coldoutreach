@@ -1,138 +1,138 @@
 .landing-header {
-  padding-top: 80px;
-  padding-bottom: 125px;
+    padding-top: 80px;
+    padding-bottom: 125px;
 
-  h1, h2, p, i {
-    color: #FFFFFF;
-  }
-
-  .title {
-    margin-top: 40px;
-    font-size: 3em;
-    letter-spacing: -0.5px;
-    line-height: 72px;
-  }
-
-  .content {
-    font-size: 1.5em;
-    letter-spacing: -0.2px;
-
-    span {
-      display: block;
-    }
-  }
-
-  a {
-    border-color: #3DD1AF;
-    background-color: #3DD1AF;
-    padding-left: 0;
-    padding-top: 7px;
-    width: 220px;
-    height: 42px;
-
-    i {
-      margin-top: 3px;
-      margin-right: 10px;
-      font-size: 20px;
+    h1, h2, p, i {
+        color: #FFFFFF;
     }
 
-    span {
-      border-left: 1px solid #F2F2F2;
-      position: relative;
-      padding-left: 10px;
-      top: -2px;
-    }
-  }
-
-  a:hover {
-    border-color: #52d6b8;
-    background-color: #52d6b8;
-  }
-
-  a:focus {
-    border-color: #36bc9d;
-    background-color: #36bc9d;
-  }
-}
-
-.idea {
-  padding-top: 50px;
-  padding-bottom: 50px;
-  border-top: 5px solid #50E3C2;
-  background-color: #F4F4F4;
-
-  h2 {
-    font-weight: bold;
-    margin-bottom: 25px;
-    font-size: 1.75em;
-    color: #525366;
-    letter-spacing: -0.28px;
-    line-height: 58px;
-  }
-}
-
-.right-decor, .left-decor {
-  position: absolute;
-}
-
-.right-decor {
-  top: -64px;
-  right: 60px;
-  transform: rotate(90deg); 
-}
-
-.left-decor {
-  left: 0;
-  bottom: 30px;  
-}
-
-#recruit_3 img {
-  position: relative;
-  bottom: 8px;
-  width: 53px;
-}
-
-.down {
-  background: #FFFFFF;
-  position: relative;
-  text-align: center;
-  font-weight: bold;
-
-  button {
-    bottom: 18px;
-
-    i {
-      position: relative;
-      top: 2px;
-    }
-  }
-}
-
-@media (max-width: 576px) {
-  .landing-header {
     .title {
-      line-height: 40px;
-      font-size: 2em;
+        margin-top: 40px;
+        font-size: 3em;
+        letter-spacing: -0.5px;
+        line-height: 72px;
     }
 
     .content {
-      font-size: 1.3em;
+        font-size: 1.5em;
+        letter-spacing: -0.2px;
+
+        span {
+            display: block;
+        }
     }
 
-    .left {
-      margin-bottom: 2em;
+    a {
+        border-color: #3DD1AF;
+        background-color: #3DD1AF;
+        padding-left: 0;
+        padding-top: 7px;
+        width: 220px;
+        height: 42px;
+
+        i {
+            margin-top: 3px;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        span {
+            border-left: 1px solid #F2F2F2;
+            position: relative;
+            padding-left: 10px;
+            top: -2px;
+        }
     }
-  }
+
+    a:hover {
+        border-color: #52d6b8;
+        background-color: #52d6b8;
+    }
+
+    a:focus {
+        border-color: #36bc9d;
+        background-color: #36bc9d;
+    }
+}
+
+.idea {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-top: 5px solid #50E3C2;
+    background-color: #F4F4F4;
+
+    h2 {
+        font-weight: bold;
+        margin-bottom: 25px;
+        font-size: 1.75em;
+        color: #525366;
+        letter-spacing: -0.28px;
+        line-height: 58px;
+    }
+}
+
+.right-decor, .left-decor {
+    position: absolute;
+}
+
+.right-decor {
+    top: -64px;
+    right: 60px;
+    transform: rotate(90deg);
+}
+
+.left-decor {
+    left: 0;
+    bottom: 30px;
+}
+
+#recruit_3 img {
+    position: relative;
+    bottom: 8px;
+    width: 53px;
+}
+
+.down {
+    background: #FFFFFF;
+    position: relative;
+    text-align: center;
+    font-weight: bold;
+
+    button {
+        bottom: 18px;
+
+        i {
+            position: relative;
+            top: 2px;
+        }
+    }
+}
+
+@media (max-width: 576px) {
+    .landing-header {
+        .title {
+            line-height: 40px;
+            font-size: 2em;
+        }
+
+        .content {
+            font-size: 1.3em;
+        }
+
+        .left {
+            margin-bottom: 2em;
+        }
+    }
 }
 
 @media (max-width: 768px) {
-  .right-decor, .left-decor {
-    display: none;
-  }
-
-  .landing-header {
-    .title {
-      margin-top: 0;
+    .right-decor, .left-decor {
+        display: none;
     }
-  }
+
+    .landing-header {
+        .title {
+            margin-top: 0;
+        }
+    }
 }

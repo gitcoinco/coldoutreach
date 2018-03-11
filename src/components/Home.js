@@ -22,8 +22,8 @@ class Home extends Component {
           <Header/>
           <Row className="landing-header">
             <Col className="left" offset={2} md={20} lg={5}>
-              <h1 class="title">A Better Way to Find Talent</h1>
-              <p class="content">
+              <h1 className="title">A Better Way to Find Talent</h1>
+              <p className="content">
                 <span>Instantly create custom</span>
                 <span>outreach emails tailored to</span>
                 <span>each candidate.</span>
@@ -35,13 +35,13 @@ class Home extends Component {
             <Col className="right" offset={2} md={20} lg={{span:11, offset:4}}>
               <Row>
                 <Col offset={4} xs={16} sm={{span:8, offset:0}}>
-                  <Card title="FIND CANDIDATE" image={candidate} id="candidate"/>
+                  <Card title="FIND CANDIDATE" image={candidate}/>
                 </Col>
                 <Col offset={4} xs={16} sm={{span:8, offset:0}}>
-                  <Card title="GENERATE EMAIL" image={generate} id="generate"/>
+                  <Card title="GENERATE EMAIL" image={generate}/>
                 </Col>
                 <Col offset={4} xs={16} sm={{span:8, offset:0}}>
-                  <Card title="REACH OUT" image={email} id="email"/>
+                  <Card title="REACH OUT" image={email}/>
                 </Col>
               </Row>
             </Col>

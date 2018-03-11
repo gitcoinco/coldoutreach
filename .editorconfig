@@ -9,7 +9,7 @@ insert_final_newline = true
 trim_trailing_whitespace = true
 
 # 4 space indentation
-[*.{html,css}]
+[*.{html,scss}]
 indent_size = 4
 
 [*.md]

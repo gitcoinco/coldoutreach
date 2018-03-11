@@ -1,54 +1,110 @@
 import React, { Component } from 'react';
-import { Row, Col, Input, Button, Icon } from 'antd';
+import {  Button, Col, Icon, Row, Upload } from 'antd';
+
 import Header from './Header';
 
 import '../assets/styles/css/resume.css';
 
-class UserInfo extends Component {
-  render() {
-    const {name, designation, positions} = this.props;
-    return (
-      <div className="profile">
-        <h3>Welcome {name.split(" ")[0]} !</h3>
-        <Col sm={24} md={12}>
-          <p class="text">We see that you are an..</p>
-          <p id="designation">{designation}</p>
-        </Col>
-        <Col sm={24} md={12}>
-          <p class="text" id="positions">
-            <Icon type="dingding" /> {positions.length} Position(s) open -
-          </p>
-          <ul>
-            {positions.map(position => (<li>{position}</li>))}
-          </ul>
-        </Col>
-      </div>
-    );
-  }
-}
 
 class Resume extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      candidate_file: null,
+      recruiter_file: null,
+    };
+  }
+
+  onSubmit() {
+    console.log('onSubmit');
+    console.log(this.state);
+
+    let data = new FormData();
+
+    data.append('candidate_file', this.state.candidate_file);
+    data.append('recruiter_file', this.state.recruiter_file);
+
+    this.props.uploadResume(data);
+  }
+
   render() {
+    const { resume } = this.props;
+
+    const candidateProps = {
+      beforeUpload: (file) => {
+        console.log(file);
+        this.setState({
+          candidate_file: file
+        });
+        return false;
+      },
+      onRemove: (file) => {
+        this.setState({ candidate_file: null });
+      },
+    };
+
+
+    const recruiterProps = {
+      beforeUpload: (file) => {
+        console.log(file);
+        this.setState({
+          recruiter_file: file
+        });
+        return false;
+      },
+      onRemove: (file) => {
+        this.setState({ recruiter_file: null });
+      },
+    };
+
     return (
       <div className="gradient">
         <Header/>
         <Row className="resume">
-          <Col offset={4} span={16}>
-            <UserInfo name="Sam Smith"
-              designation="Engineering Manager - Buzzfeed - New York, NY - "
-              positions={["Django Lead", "UX Designer Lead"]}
-            />
-          </Col>
           <Col className="upload-box" offset={4} span={16}>
-            <Col span={24}>
-              <h2>Who would you like to reach out to?</h2>
-              <h4>Paste Candidate URL</h4>
+            <Col xs={24} md={12} lg={12}>
+              <Col span={24}>
+                <h4>Upload Your Resume</h4>
+              </Col>
+              <Col xs={24} md={24} lg={24}>
+                <Upload
+                  {...recruiterProps}
+                  accept="application/pdf"
+                >
+                  {!this.state.recruiter_file && (
+                    <div>
+                      <Icon type={this.state.loading ? 'loading' : 'plus'} />
+                      <div className="ant-upload-text">Upload</div>
+                    </div>
+                  )}
+                </Upload>
+              </Col>
             </Col>
-            <Col xs={24} md={20} lg={18}>
-              <Input placeholder="http://www.linkedin.com/in/amykeys"/>
+
+            <Col xs={24} md={12} lg={12}>
+              <Col span={24}>
+                <h4>Upload Candidate Resume</h4>
+              </Col>
+              <Col xs={24} md={24} lg={24}>
+                <Upload
+                  {...candidateProps}
+                  accept="application/pdf"
+                >
+                  {!this.state.candidate_file && (
+                    <div>
+                      <Icon type={this.state.loading ? 'loading' : 'plus'} />
+                      <div className="ant-upload-text">Upload</div>
+                    </div>
+                  )}
+                </Upload>
+              </Col>
             </Col>
-            <Col xs={24} md={4} lg={6}>
-              <Button>Generate Email</Button>
+
+            <Col span={24} className="text-center">
+              <Button onClick={this.onSubmit.bind(this)} loading={resume.loading}>
+                {resume.loading ? 'Generating...' : 'Generate Email'}
+              </Button>
             </Col>
           </Col>
         </Row>

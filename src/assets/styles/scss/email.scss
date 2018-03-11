@@ -1,99 +1,99 @@
 .email {
 
-  padding-top: 4em;
-  padding-bottom: 4em;
+    padding-top: 4em;
+    padding-bottom: 4em;
 
-  .text {
-    font-size: 12px;
-  }
-
-  .applicant-info {
-    margin-bottom: 4em;
-  }
-
-  img {
-    width: 6.5em;
-    border-radius:100%;
-  }
-
-  p, h2 {
-    color: white;
-  }
-
-  p {
-    margin-bottom: 5px;
-  }
-
-  h2 {
-    font-size: 25px;
-    margin-bottom: 0px;
-  }
-
-  .designation {
-    font-size: 14px;
-    margin-bottom: 8px;
-    border-radius: 3px;
-  }
-
-  .profile {
-    font-size: 12px;
-    color: black;
-    background: white;
-    padding: 5px;
-    font-family: "avenirNext";
-  }
-
-  .editor {
-    background: #4e4376;
-    padding: 10px 10px 15px;
-
-    button {
-      background-color: #595c7c;
-      border-color: #595c7c;
-      color: #FFFFFF;
-      margin-top:10px;
-      margin-left: 8px;
-      margin-right: 8px;
+    .text {
+        font-size: 12px;
     }
 
-    button:hover {
-      background-color: #7a7c96;
-      border-color: #7a7c96;
+    .applicant-info {
+        margin-bottom: 4em;
     }
 
-    .generate {
-      float: right;
-      background-color: #3DD1AF;
-      border-color: #3DD1AF;
+    img {
+        width: 6.5em;
+        border-radius: 100%;
     }
 
-    .generate:hover {
-      background-color: #52d6b8;
-      border-color: #52d6b8;
+    p, h2 {
+        color: white;
     }
 
-    .generate:focus {
-      border-color: #36bc9d;
-      background-color: #36bc9d;
+    p {
+        margin-bottom: 5px;
     }
-  }
-  
+
+    h2 {
+        font-size: 25px;
+        margin-bottom: 0px;
+    }
+
+    .designation {
+        font-size: 14px;
+        margin-bottom: 8px;
+        border-radius: 3px;
+    }
+
+    .profile {
+        font-size: 12px;
+        color: black;
+        background: white;
+        padding: 5px;
+        font-family: "avenirNext";
+    }
+
+    .editor {
+        background: #4e4376;
+        padding: 10px 10px 15px;
+
+        button {
+            background-color: #595c7c;
+            border-color: #595c7c;
+            color: #FFFFFF;
+            margin-top: 10px;
+            margin-left: 8px;
+            margin-right: 8px;
+        }
+
+        button:hover {
+            background-color: #7a7c96;
+            border-color: #7a7c96;
+        }
+
+        .generate {
+            float: right;
+            background-color: #3DD1AF;
+            border-color: #3DD1AF;
+        }
+
+        .generate:hover {
+            background-color: #52d6b8;
+            border-color: #52d6b8;
+        }
+
+        .generate:focus {
+            border-color: #36bc9d;
+            background-color: #36bc9d;
+        }
+    }
+
 }
 
-@media (max-width: 576px ) {
-  .recruit-img {
-    margin-top: 1em;
-  }
+@media (max-width: 576px) {
+    .recruit-img {
+        margin-top: 1em;
+    }
 }
 
 @media (max-width: 768px) {
- .email {
-   .editor .generate {
-      float: none;
-    }
+    .email {
+        .editor .generate {
+            float: none;
+        }
 
-    .recruit-img {
-      text-align: center;
+        .recruit-img {
+            text-align: center;
+        }
     }
-  }
 }
