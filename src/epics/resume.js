@@ -17,13 +17,26 @@ const uploadResumeEpic = (action$) =>
     .switchMap((action) => {
       return ajax.post(`/profile`, action.payload)
         .map((data) => {
-          history.push('/email/');
+          history.push('/message/');
           return Actions.UploadResumeSuccess(data.response)
         })
         .catch((error) => ActionsObservable.of(Actions.Error(error)));
     });
 
 
+const generateEmailEpic = (action$) =>
+  action$
+    .ofType(Actions.GENERATE_EMAIL)
+    .switchMap((action) => {
+      return ajax.post(`/email`, action.payload, { 'Content-Type': 'application/json' })
+        .map((data) => {
+          return Actions.GenerateEmailSuccess(data.response.generated_text)
+        })
+        .catch((error) => ActionsObservable.of(Actions.Error(error)));
+    });
+
+
 export const epics = combineEpics(
+  generateEmailEpic,
   uploadResumeEpic,
 );

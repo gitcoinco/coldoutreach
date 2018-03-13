@@ -17,9 +17,6 @@ class Resume extends Component {
   }
 
   onSubmit() {
-    console.log('onSubmit');
-    console.log(this.state);
-
     let data = new FormData();
 
     data.append('candidate_file', this.state.candidate_file);
@@ -33,7 +30,6 @@ class Resume extends Component {
 
     const candidateProps = {
       beforeUpload: (file) => {
-        console.log(file);
         this.setState({
           candidate_file: file
         });
@@ -47,7 +43,6 @@ class Resume extends Component {
 
     const recruiterProps = {
       beforeUpload: (file) => {
-        console.log(file);
         this.setState({
           recruiter_file: file
         });

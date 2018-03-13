@@ -15,6 +15,6 @@ export const routes = [
   {
     component: Containers.EmailContainer,
     exact: true,
-    path: '/email',
+    path: '/message',
   }
 ];

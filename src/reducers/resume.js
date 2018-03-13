@@ -14,25 +14,34 @@ export default function reducer(
 
   switch (action.type) {
     case Actions.UPLOAD_RESUME:
-      console.log(action.payload);
+    case Actions.GENERATE_EMAIL:
       return {
         ...state,
         error: null,
         loading: true,
       };
 
+
     case Actions.UPLOAD_RESUME_SUCCESS:
-      console.log(action.payload);
       return {
-        ...state,
-        candidate_json: action.payload.candidate_json,
+        candidate_json: JSON.parse(action.payload.candidate_json),
         generated_text: action.payload.generated_text,
+        error: null,
         loading: false,
-        recruiter_json: action.payload.recruiter_json,
+        recruiter_json: JSON.parse(action.payload.recruiter_json),
       };
 
+
+    case Actions.GENERATE_EMAIL_SUCCESS:
+      return {
+        ...state,
+        error: null,
+        generated_text: action.payload,
+        loading: false,
+      };
+
+
     case Actions.ERROR:
-      console.log(action.payload);
       return {
         ...state,
         loading: false,

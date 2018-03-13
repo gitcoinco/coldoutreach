@@ -25,20 +25,20 @@ class Editor extends Component {
         Engineering Manager, Buzzfeed</br>
         Job URL
       </p>
-      `,
-      responseList: []
+      `
     };
 
     this.receiveHtml = this.receiveHtml.bind(this);
   }
 
-  receiveHtml(content) {
-    this.setState({responseList:[]});
+  receiveHtml = (content) => {
+    if (this.state.htmlContent !== content) {
+      this.props.onEdit(content);
+    }
   }
 
   componentWillReceiveProps(nextProps) {
     if (nextProps.email !== this.props.email) {
-      console.log(nextProps.email);
       this.setState({ htmlContent: nextProps.email });
     }
   }
@@ -48,7 +48,7 @@ class Editor extends Component {
       <LzEditor
         active={true}
         lang="en"
-        importContent={this.state.htmlContent}
+        importContent={this.props.email}
         cbReceiver={this.receiveHtml}
         image={false}
         video={false}
