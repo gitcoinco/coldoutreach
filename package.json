@@ -46,16 +46,6 @@
       "git add"
     ]
   },
-  "proxy": {
-    "/email": {
-      "changeOrigin": true,
-      "target": "https://coldoutreach-staging.herokuapp.com/"
-    },
-    "/profile": {
-      "changeOrigin": true,
-      "target": "https://coldoutreach-staging.herokuapp.com/"
-    }
-  },
   "scripts": {
     "build-css": "node-sass-chokidar src/assets/styles/scss -o src/assets/styles/css",
     "watch-css": "npm run build-css && node-sass-chokidar src/assets/styles/scss/ -o src/assets/styles/css/ --watch --recursive",

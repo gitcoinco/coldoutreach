@@ -22,7 +22,7 @@ class Email extends Component {
 
   componentWillMount() {
     if (!this.props.resume.loading && !this.props.resume.generated_text) {
-      history.push('/resume/');
+      history.push('/resume');
     }
   }
 

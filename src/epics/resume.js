@@ -17,7 +17,7 @@ const uploadResumeEpic = (action$) =>
     .switchMap((action) => {
       return ajax.post(`/api/profile`, action.payload)
         .map((data) => {
-          history.push('/message/');
+          history.push('/email');
           return Actions.UploadResumeSuccess(data.response)
         })
         .catch((error) => ActionsObservable.of(Actions.Error(error)));
@@ -28,7 +28,7 @@ const generateEmailEpic = (action$) =>
   action$
     .ofType(Actions.GENERATE_EMAIL)
     .switchMap((action) => {
-      return ajax.post(`/email`, action.payload, { 'Content-Type': 'application/json' })
+      return ajax.post(`/api/email`, action.payload, { 'Content-Type': 'application/json' })
         .map((data) => {
           return Actions.GenerateEmailSuccess(data.response.generated_text)
         })
