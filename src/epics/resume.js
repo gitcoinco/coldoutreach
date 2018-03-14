@@ -15,7 +15,7 @@ const uploadResumeEpic = (action$) =>
   action$
     .ofType(Actions.UPLOAD_RESUME)
     .switchMap((action) => {
-      return ajax.post(`/profile`, action.payload)
+      return ajax.post(`/api/profile`, action.payload)
         .map((data) => {
           history.push('/message/');
           return Actions.UploadResumeSuccess(data.response)
