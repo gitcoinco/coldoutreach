@@ -29,7 +29,6 @@ def index(request):
   return render(request, 'generator/index.html', context)
 
 @csrf_exempt
-# @override_settings(STATICFILES_STORAGE = None)
 def profile(request):
   context = {}
   if request.FILES['recruiter_file']:
@@ -45,7 +44,6 @@ def profile(request):
   return JsonResponse(context)
 
 @csrf_exempt
-# @override_settings(STATICFILES_STORAGE = None)
 def email(request):
   context = {}
   data = json.loads(request.body)
