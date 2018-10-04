@@ -52,7 +52,6 @@
       "target": "http://127.0.0.1:8000/"
     }
   },
-
   "scripts": {
     "build-css": "node-sass-chokidar src/assets/styles/scss -o src/assets/styles/css",
     "watch-css": "npm run build-css && node-sass-chokidar src/assets/styles/scss/ -o src/assets/styles/css/ --watch --recursive",
