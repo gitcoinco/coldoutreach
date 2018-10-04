@@ -3,7 +3,7 @@ Django==2.1.2
 django-cors-headers==2.1.0
 gunicorn==19.7.1
 pdfminer.six==20170720
-pycryptodome==3.4.8
+pycryptodome==3.6.6
 pytz==2017.3
 six==1.11.0
 tracery==0.1.1
